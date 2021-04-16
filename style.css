@@ -315,7 +315,7 @@ label {
 }
 
 .profile-btn {
-    margin: 0 auto 8rem;
+    margin: 0 auto 10rem;
     display: block;
 }
 
@@ -627,6 +627,11 @@ input[type="email"] {
 
     .profile:last-child {
         display: none;
+    }
+
+    .profile-btn {
+        margin: 0 auto 2rem;
+        display: block;
     }
 
     .slider-btns {
