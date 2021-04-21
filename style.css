@@ -20,12 +20,17 @@ body {
                 url(img/bg-tablet-pattern.svg) no-repeat -60% 55%;
 }
 
-h1, h2, h3, p {
+h1, 
+h2, 
+h3, 
+p {
     margin: 0;
     padding: 0;
 }
 
-h1, h2, h3 {
+h1, 
+h2, 
+h3 {
     color: var(--headers-font-cl);
     line-height: 1;
 }
@@ -44,7 +49,9 @@ label {
 /* ////////////////////////// UTILITIES /////////////////////// */
 
 
-.start-btn, .numb-btn, .foot-2-btn {
+.start-btn, 
+.numb-btn, 
+.foot-2-btn {
     background: var(--orange-cl);
     border: none;
     color: var(--white-cl);
@@ -96,8 +103,8 @@ label {
     position: fixed;
     top: 50%;
     left: 50%;
-    z-index: 9999;
     transform: translate(-50%, -70%);
+    z-index: 9999;
     padding: 2rem 0;
     background: var(--white-cl);
     width: 70%;
@@ -137,7 +144,8 @@ label {
 
 
 
-.wrapper, .nav-wrapper {
+.wrapper, 
+.nav-wrapper {
     width: 75%;
     max-width: 95rem;
     margin: 4rem auto;
@@ -153,7 +161,8 @@ label {
     justify-content: space-between;
 }
 
-.top-left, .top-right {
+.top-left, 
+.top-right {
     width: 47%;
 }
 
@@ -173,7 +182,6 @@ label {
 }
 
 .main-nav {
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -214,7 +222,8 @@ label {
     display: none;
 }
 
-.toggle-btn::before, .toggle-btn::after {
+.toggle-btn::before, 
+.toggle-btn::after {
     content: '';
     position: absolute;
     width: 30px;
@@ -285,6 +294,7 @@ label {
 
 
 .profiles-container {
+    position: relative;
     max-width: 120rem;
     margin: 6rem 2rem 2rem;
     display: flex;
@@ -306,6 +316,10 @@ label {
 
 .profile + .profile {
     margin-left: 2rem;
+}
+
+.last-profile {
+    display: none;
 }
 
 .name {
@@ -331,6 +345,15 @@ label {
     height: .6rem;
     border-radius: 50%;
     border: 1px solid var(--orange-cl);
+    cursor: pointer;
+}
+
+.bg-orange {
+    background: var(--orange-cl);
+}
+
+.sl-btn:hover {
+    background: var(--orange-cl);
 }
 
 .sl-btn + .sl-btn {
@@ -346,7 +369,8 @@ label {
     overflow: hidden;
 }
 
-.foot-bg-1, .foot-bg-2 {
+.foot-bg-1, 
+.foot-bg-2 {
     position: absolute;
     z-index: 1;
     opacity: .1;
@@ -421,21 +445,25 @@ label {
     justify-content: space-between;
 }
 
-.foot-nav-1, .foot-nav-2 {
+.foot-nav-1, 
+.foot-nav-2 {
    margin: 0;
    list-style-type: none;
 }
 
-.foot-nav-1 a, .foot-nav-2 a {
+.foot-nav-1 a, 
+.foot-nav-2 a {
     color: var(--white-cl);
     text-decoration: none;
 }
 
-.foot-nav-1 a:hover, .foot-nav-2 a:hover {
+.foot-nav-1 a:hover, 
+.foot-nav-2 a:hover {
     color: var(--orange-cl);
 }
 
-.foot-nav-1 li, .foot-nav-2 li {
+.foot-nav-1 li, 
+.foot-nav-2 li {
     margin: 0;
 }
 
@@ -443,7 +471,8 @@ label {
     padding: 0;
 }
 
-.foot-nav-1 li + li, .foot-nav-2 li + li {
+.foot-nav-1 li + li, 
+.foot-nav-2 li + li {
     margin-top: 1rem;
 }
 
@@ -465,7 +494,10 @@ input[type="email"] {
     font-weight: 700;
 }
 
-
+.footer-link {
+    color: var(--orange-cl);
+    text-decoration: none;
+}
 
 /* /////////////////////////////////// MEDIA QUERIES //////////////////// */
 
@@ -551,7 +583,8 @@ input[type="email"] {
         text-align: center;
     }
 
-    .top-left, .top-right {
+    .top-left, 
+    .top-right {
         width: 100%;
     }
 
@@ -560,7 +593,8 @@ input[type="email"] {
         margin-right: 0;
     }
 
-    .nav-ul, .main-nav button {
+    .nav-ul, 
+    .main-nav button {
         display: none;
     }
 
@@ -589,7 +623,8 @@ input[type="email"] {
         align-items: center;
     }
 
-    .mid-left, .mid-right {
+    .mid-left, 
+    .mid-right {
         width: 100%;
     }
 
@@ -615,18 +650,22 @@ input[type="email"] {
         margin: 6rem 2rem 0rem;
         padding-top: 2.5rem;
         overflow: hidden;
+        height: 20rem;
     }   
+
+    .profile {
+        width: 100%;
+        position: absolute;
+        transition: all .25s linear;
+        transform: translateX(-200%);
+    }
+
+    .last-profile {
+        display: block;
+    }
 
     .profile + .profile {
         margin: 0;
-    }
-
-    .profile:first-child {
-        display: none;
-    }
-
-    .profile:last-child {
-        display: none;
     }
 
     .profile-btn {
